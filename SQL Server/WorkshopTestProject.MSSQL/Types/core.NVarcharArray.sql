@@ -1,0 +1,2 @@
+﻿CREATE TYPE core.NVarcharArray
+  AS TABLE (val NVARCHAR(MAX) NOT NULL)

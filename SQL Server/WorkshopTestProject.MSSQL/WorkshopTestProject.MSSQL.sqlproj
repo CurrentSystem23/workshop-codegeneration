@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>WorkshopTestProject.MSSQL</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{bd681285-75c0-47ce-a409-94d5b273a2df}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>WorkshopTestProject.MSSQL</RootNamespace>
+    <AssemblyName>WorkshopTestProject.MSSQL</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="_Solution" />
+    <Folder Include="Tables" />
+    <Folder Include="Tables\_Generated" />
+    <Folder Include="Tables\core" />
+    <Folder Include="Schemas" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\_Generated" />
+    <Folder Include="Scripts\100_Configuration" />
+    <Folder Include="Triggers" />
+    <Folder Include="Triggers\_Generated" />
+    <Folder Include="Triggers\_Generated\core" />
+    <Folder Include="Tables\_Generated\core" />
+    <Folder Include="Scripts\_Generated\core" />
+    <Folder Include="Views" />
+    <Folder Include="Views\core" />
+    <Folder Include="Functions" />
+    <Folder Include="Functions\core" />
+    <Folder Include="Functions\core\InlineFunctions" />
+    <Folder Include="Types" />
+    <Folder Include="Functions\core\ScalarFunctions" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="Scripts\100_Configuration\_Generated" />
+    <Folder Include="Scripts\100_Configuration\_Generated\core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\core\DomainType.sql" />
+    <Build Include="Tables\core\User.sql" />
+    <Build Include="Schemas\core.sql" />
+    <Build Include="Tables\core\DomainValue.sql" />
+    <Build Include="Tables\core\Tenant.sql" />
+    <None Include="Scripts\_Generated\CheckConstraintsOn.Generated.sql" />
+    <Build Include="Tables\core\Country.sql" />
+    <Build Include="Tables\core\Currency.sql" />
+    <Build Include="Tables\core\UserGroup.sql" />
+    <Build Include="Tables\core\UserRight.sql" />
+    <Build Include="Tables\core\UserRightsRole.sql" />
+    <Build Include="Triggers\_Generated\core\core.Country_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.Currency_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.DomainType_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.DomainValue_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.Tenant_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.User_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.UserGroup_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.UserRight_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.UserRightsRole_HistTrigger.Generated.sql" />
+    <None Include="Scripts\_Generated\core\Country.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\Currency.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\DomainType.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\DomainValue.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\Tenant.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\User.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\UserGroup.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\UserRight.MergeInsert.Generated.sql" />
+    <None Include="Scripts\_Generated\core\UserRightsRole.MergeInsert.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.Country_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.Currency_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.DomainType_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.DomainValue_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.Tenant_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.User_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.UserGroup_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.UserRight_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.UserRightsRole_Hist.Generated.sql" />
+    <Build Include="Tables\core\Product.sql" />
+    <Build Include="Tables\core\Stock.sql" />
+    <Build Include="Tables\_Generated\core\core.Product_Hist.Generated.sql" />
+    <Build Include="Tables\_Generated\core\core.Stock_Hist.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.Product_HistTrigger.Generated.sql" />
+    <Build Include="Triggers\_Generated\core\core.Stock_HistTrigger.Generated.sql" />
+    <None Include="Scripts\100_Configuration\190_Core_Products.sql">
+      <AnsiNulls>ProjectDefault</AnsiNulls>
+    </None>
+    <None Include="Scripts\100_Configuration\191_Core_Products.sql">
+      <AnsiNulls>ProjectDefault</AnsiNulls>
+    </None>
+    <Build Include="Views\core\ProductsInStock.sql" />
+    <Build Include="Functions\core\InlineFunctions\ProductInStock.sql" />
+    <Build Include="Types\core.BigintArray.sql" />
+    <Build Include="Types\core.DecimalArray.sql" />
+    <Build Include="Types\core.FloatArray.sql" />
+    <Build Include="Types\core.IntArray.sql" />
+    <Build Include="Types\core.NVarcharArray.sql" />
+    <Build Include="Types\core.RealArray.sql" />
+    <Build Include="Types\core.SmallintArray.sql" />
+    <Build Include="Types\core.TinyintArray.sql" />
+    <Build Include="Types\core.UniqueidentifierArray.sql" />
+    <Build Include="Types\core.VarcharArray.sql" />
+    <Build Include="Functions\core\InlineFunctions\SpecialProducts.sql" />
+    <Build Include="Functions\core\ScalarFunctions\GetInsertUpdateDeleteInformation.sql" />
+    <Build Include="StoredProcedures\sp_ProductInStock.sql" />
+    <None Include="Scripts\Der_Plapperkaefer_von_Traal.sql" />
+    <None Include="Scripts\100_Configuration\_Generated\core\131_Core_UserRight.Generated.sql" />
+    <None Include="Scripts\100_Configuration\_Generated\core\132_Core_UserRightsRole_SystemAdministrator.Generated.sql" />
+    <None Include="Scripts\100_Configuration\_Generated\core\133_Core_UserRightToUserRightsRole.Generated.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\InitialData.sql" />
+    <None Include="Scripts\_Generated\CheckConstraintsOff.Generated.sql" />
+    <None Include="Scripts\100_Configuration\100_Core_DomainTypes.sql" />
+    <None Include="Scripts\100_Configuration\101_Core_DomainValues.sql" />
+    <None Include="Scripts\100_Configuration\120_Core_Tenants.sql" />
+    <None Include="Scripts\100_Configuration\130_Core_User.sql" />
+    <None Include="WorkshopTestProject.MSSQL.publish.xml" />
+    <None Include="Scripts\100_Configuration\110_Core_Countries.sql" />
+    <None Include="Scripts\100_Configuration\111_Core_Currencies.sql" />
+    <None Include="Scripts\100_Configuration\133_Core_UserGroup.sql" />
+    <None Include="Scripts\100_Configuration\131_Core_UserRight.sql" />
+    <None Include="Scripts\100_Configuration\132_Core_UserRightsRole.sql" />
+    <None Include="WorkshopTestProject.MSSQL.LocalServer.publish.publish.xml" />
+    <None Include="ClearAll.cmd" />
+    <None Include="RunEntityGenerator_01_Facade.cmd" />
+    <None Include="RunEntityGenerator_02_BusinessLogic.cmd" />
+    <None Include="RunEntityGenerator_03_API.cmd" />
+    <None Include="RunEntityGenerator_04_ClientAngular.cmd" />
+    <None Include="RunEntityGenerator_04_ClientDotNet.cmd" />
+    <None Include="RunEntityGenerator_05_UnitTests.cmd" />
+    <None Include="RunEntityGenerator_06_Complete.cmd" />
+  </ItemGroup>
+</Project>

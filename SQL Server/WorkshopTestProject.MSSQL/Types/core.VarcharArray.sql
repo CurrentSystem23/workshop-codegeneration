@@ -1,0 +1,2 @@
+﻿CREATE TYPE core.VarcharArray
+  AS TABLE (val VARCHAR(MAX) NOT NULL)
